@@ -51,10 +51,13 @@ function stopTimer(){
 //function to stop and reset the value to 00:00:00 
 function resetTimer(){
     clearInterval(timerId);
+    hour= 0;
+    min=0;
+    sec=0;
     timer.innerHTML = "00:00:00";
 }
 
 // to set functionality on click of button
-start.addEventListener('click',startTimer);
-stopbttn.addEventListener('click', stopTimer);
-reset.addEventListener('click',resetTimer);
+start.addEventListener('click',startTimer); // for start
+stopbttn.addEventListener('click', stopTimer); // for stop
+reset.addEventListener('click',resetTimer);  // for reset
